@@ -7,16 +7,21 @@ public class bt5 {
         int n = scanner.nextInt();
 
         System.out.println("Các số hoàn hảo nhỏ hơn " + n + " là:");
-
+        int count = 0;
         for (int i = 1; i < n; i++) {
             int sum = 0;
             for (int k = 1; k < i; k++) {
                 if (i % k == 0) {
                     sum += k;
+                    count++;
                 }
             }
-            if (sum == i) {
-                System.out.println(i);
+            if(count > 0){
+                if (sum == i) {
+                    System.out.println(i);
+                }else {
+                    System.out.println("Không có số hoàn hảo nào");
+                }
             }
         }
 

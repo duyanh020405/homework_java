@@ -8,7 +8,6 @@ public class bt1 {
         int total = 0;
         if (number <= 0 ) {
             System.out.println("Số không hợp lệ");
-            return;
         }
         else {
             for(int i = 1 ; i <= number ; i++) {

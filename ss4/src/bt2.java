@@ -4,13 +4,13 @@ public class bt2 {
         System.out.println("Nhập số n để kiểm tra");
         Scanner scanner= new Scanner(System.in);
         int number = scanner.nextInt();
-        int uoc = 0 ;
+        int number_2 = 0 ;
         for (int i = 1; i < number; i++) {
             if(number % i == 0){
-                uoc +=1 ;
+                number_2 +=1 ;
             }
         }
-        if(uoc >2){
+        if(number_2 >2){
             System.out.println("Đây không phải số nguyên tố");
         }
         else {
