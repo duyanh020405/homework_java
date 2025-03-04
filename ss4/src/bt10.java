@@ -14,19 +14,27 @@ public class bt10 {
         sc.nextLine();
         switch(choice){
             case 1:
-                int total = 0;
-                for(int i = 1 ; i < number; i++){
-                    if(number % i == 0){
-                        total +=1;
+                if (number < 2) {
+                    System.out.println("Đây không phải là số nguyên tố");
+                    break;
+                }
+
+                boolean isPrime = true;
+                for (int i = 2; i <= Math.sqrt(number); i++) {
+                    if (number % i == 0) {
+                        isPrime = false;
+                        break; 
                     }
                 }
-                if(total >2){
+
+                if (isPrime) {
+                    System.out.println("Đây là số nguyên tố");
+                } else {
                     System.out.println("Đây không phải là số nguyên tố");
                 }
-                else {
-                    System.out.println("Đây là số nguyên tố");
-                }
                 break;
+            default:
+                System.out.println("Lựa chọn không hợp lệ");
             case 2:
                 int total_2 = 0;
                 for(int i = 1 ; i < number; i++){

@@ -1,21 +1,27 @@
 import java.util.Scanner;
+
 public class bt2 {
     public static void main(String[] args) {
-        System.out.println("Nhập số n để kiểm tra");
-        Scanner scanner= new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập số n để kiểm tra:");
         int number = scanner.nextInt();
-        int number_2 = 0 ;
-        for (int i = 1; i < number; i++) {
-            if(number % i == 0){
-                number_2 +=1 ;
+        scanner.close();
+
+        if (number < 2) {
+            System.out.println("Đây không phải số nguyên tố");
+            return;
+        }
+        boolean isPrime = true;
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                isPrime = false;
+                break;
             }
         }
-        if(number_2 >2){
+        if (isPrime) {
+            System.out.println("Đây là số nguyên tố");
+        } else {
             System.out.println("Đây không phải số nguyên tố");
         }
-        else {
-            System.out.println("Đây là số nguyên tố");
-        }
-
     }
 }
