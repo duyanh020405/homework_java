@@ -24,7 +24,7 @@ public class bt9 {
                 count = 1;
             }
         }
-        
+
         output.append(input.charAt(input.length() - 1)).append(count);
 
         System.out.println("Chuoi sau khi nen: " + output);
