@@ -3,23 +3,30 @@ import java.util.Scanner;
 public class bt9 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Nhap chuoi :");
+        System.out.print("Nhap chuoi: ");
         String input = sc.nextLine();
-        StringBuilder output = new StringBuilder();
-
         sc.close();
+
+        if (input.isEmpty()) {
+            System.out.println("Chuoi rong!");
+            return;
+        }
+
+        StringBuilder output = new StringBuilder();
         int count = 1;
-        for (int i = 0; i < input.length()-2; i++) {
+
+        for (int i = 0; i < input.length() - 1; i++) {
             char ch = input.charAt(i);
-            if (input.charAt(i+1) == ch) {
+            if (input.charAt(i + 1) == ch) {
                 count++;
-            }
-            else{
-                output.append(ch);
-                output.append(count);
+            } else {
+                output.append(ch).append(count);
+                count = 1;
             }
         }
+        
         output.append(input.charAt(input.length() - 1)).append(count);
-        System.out.println(output);
+
+        System.out.println("Chuoi sau khi nen: " + output);
     }
 }
