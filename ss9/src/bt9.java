@@ -1,5 +1,5 @@
 public class bt9 {
-    public class Fraction {
+    public static class Fraction {
         private int numerator;
         private int denominator;
 
@@ -11,21 +11,25 @@ public class bt9 {
             this.denominator = denominator;
             simplify();
         }
+
         public Fraction add(Fraction other) {
             int newNumerator = this.numerator * other.denominator + other.numerator * this.denominator;
             int newDenominator = this.denominator * other.denominator;
             return new Fraction(newNumerator, newDenominator);
         }
+
         public Fraction subtract(Fraction other) {
             int newNumerator = this.numerator * other.denominator - other.numerator * this.denominator;
             int newDenominator = this.denominator * other.denominator;
             return new Fraction(newNumerator, newDenominator);
         }
+
         public Fraction multiply(Fraction other) {
             int newNumerator = this.numerator * other.numerator;
             int newDenominator = this.denominator * other.denominator;
             return new Fraction(newNumerator, newDenominator);
         }
+
         public Fraction divide(Fraction other) {
             if (other.numerator == 0) {
                 throw new ArithmeticException("Không thể chia cho 0");
@@ -58,6 +62,9 @@ public class bt9 {
         public String toString() {
             return numerator + "/" + denominator;
         }
+    }
+
+    public static class bt9 {
         public void main(String[] args) {
             Fraction f1 = new Fraction(3, 4);
             Fraction f2 = new Fraction(2, 5);
@@ -71,5 +78,6 @@ public class bt9 {
             System.out.println("Chia: " + f1.divide(f2));
         }
     }
+
 
 }
