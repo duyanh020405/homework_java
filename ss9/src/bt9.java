@@ -2,7 +2,6 @@ public class bt9 {
     public static class Fraction {
         private int numerator;
         private int denominator;
-
         public Fraction(int numerator, int denominator) {
             if (denominator == 0) {
                 throw new IllegalArgumentException("Mẫu số không thể bằng 0");
