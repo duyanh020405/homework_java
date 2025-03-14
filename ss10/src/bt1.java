@@ -1,4 +1,4 @@
-package bt10.src;
+package ss10.src;
 
 public class bt1 {
     /*

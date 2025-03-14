@@ -1,4 +1,4 @@
-package bt10.src;
+package ss10.src;
 
 public class bt2 {
     /*
@@ -103,5 +103,4 @@ Buddy sủa: Gâu Gâu!
 
 Kế thừa là công cụ mạnh trong OOP nhưng cần sử dụng cẩn thận để tránh tạo ra một hệ thống quá phụ thuộc và khó bảo trì. 🚀
      */
-    bt*l
 }
