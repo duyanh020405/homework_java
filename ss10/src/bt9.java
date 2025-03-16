@@ -9,7 +9,6 @@ class Employee {
         this.id = 0;
         this.salary = 0.0;
     }
-
     public Employee(String name, int id, double salary) {
         this.name = name;
         this.id = id;
@@ -29,13 +28,10 @@ class Employee {
         return  name + id + salary;
     }
 }
-
-// Lớp con Manager kế thừa từ Employee
 class Manager extends Employee {
     private double bonus;
 
     public Manager() {
-        super();
         this.bonus = 0.0;
     }
 

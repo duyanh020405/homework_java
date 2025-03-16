@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 abstract class Shape {
     protected String name;
-    public Shape(String name) {
+    public Shape() {
         this.name = name;
     }
     public abstract double calculateArea();
@@ -17,7 +17,7 @@ abstract class Shape {
 class Circle extends Shape {
     private double radius;
     public Circle(String name, double radius) {
-        super(name);
+        super();
         this.radius = radius;
     }
     @Override
@@ -36,7 +36,7 @@ class Circle extends Shape {
 class Rectangle extends Shape {
     private double width, height;
     public Rectangle(String name, double width, double height) {
-        super(name);
+        super();
         this.width = width;
         this.height = height;
     }
@@ -57,7 +57,7 @@ class Triangle extends Shape {
     private double a, b, c;
 
     public Triangle(String name, double a, double b, double c) {
-        super(name);
+        super();
         this.a = a;
         this.b = b;
         this.c = c;
@@ -80,7 +80,7 @@ class Triangle extends Shape {
 public class bt10 {
     public static void main(String[] args) {
         ArrayList<Shape> shapeList = new ArrayList<>();
-        shapeList.add(new Circle_bt5("Hình tròn", 5));
+        shapeList.add(new Circle_bt5(5));
         shapeList.add(new Rectangle("Hình chữ nhật", 4, 6));
         shapeList.add(new Triangle("Tam giác", 3, 4, 5));
         for (Shape shape : shapeList) {
