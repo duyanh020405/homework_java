@@ -34,20 +34,35 @@ public class bt9 {
             this.altitude = altitude;
         }
 
-        void move() { System.out.println("Airplane fly" + altitude); }
+        void move() { System.out.println("Airplane fly " + altitude); }
         void sound() { System.out.println("Whoosh"); }
     }
 
-    static public class Main {
-        public void main(String[] args) {
-            Vehicle[] vehicles = {new Car(), new Bike(), new Bus(50), new Airplane(30000)};
-            int[][] data = {{2, 60}, {1, 15}, {3, 50}, {5, 800}};
+    public static void main(String[] args) {
+        Vehicle car = new Car();
+        Vehicle bike = new Bike();
+        Vehicle bus = new Bus(50);
+        Vehicle airplane = new Airplane(30000);
 
-            for (int i = 0; i < vehicles.length; i++) {
-                vehicles[i].move();
-                vehicles[i].sound();
-                System.out.println("Moved: " + vehicles[i].move(data[i][0], data[i][1]) );
-            }
-        }
+        int carTime = 2, carSpeed = 60;
+        int bikeTime = 1, bikeSpeed = 15;
+        int busTime = 3, busSpeed = 50;
+        int airplaneTime = 5, airplaneSpeed = 800;
+
+        car.move();
+        car.sound();
+        System.out.println("Moved: " + car.move(carTime, carSpeed));
+
+        bike.move();
+        bike.sound();
+        System.out.println("Moved: " + bike.move(bikeTime, bikeSpeed));
+
+        bus.move();
+        bus.sound();
+        System.out.println("Moved: " + bus.move(busTime, busSpeed));
+
+        airplane.move();
+        airplane.sound();
+        System.out.println("Moved: " + airplane.move(airplaneTime, airplaneSpeed));
     }
 }
