@@ -5,9 +5,9 @@ public class Main {
         TV tv = new TV();
         Radio radio = new Radio();
 
-        radio.turnOff();
         radio.turnOn();
-        tv.turnOff();
+        radio.turnOff();
         tv.turnOn();
+        tv.turnOff();
     }
 }

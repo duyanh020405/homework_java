@@ -11,8 +11,8 @@ public class bt2 {
     public static void main(String[] args) {
         Calculator calc = new Calculator();
         int sumTwoNumbers = calc.add(5, 10);
-        System.out.println("Tổng của 5 và 10 là: " + sumTwoNumbers);
+        System.out.println("Tổng 2 so: " + sumTwoNumbers);
         int sumThreeNumbers = calc.add(5, 10, 15);
-        System.out.println("Tổng của 5, 10 và 15 là: " + sumThreeNumbers);
+        System.out.println("Tổng 3 so: " + sumThreeNumbers);
     }
 }

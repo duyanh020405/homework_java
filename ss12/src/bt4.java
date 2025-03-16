@@ -34,7 +34,6 @@ public class bt4 {
             return width * height;
         }
     }
-    public class Main {
         public static void main(String[] args) {
             Shape shape = new Shape();
             Circle circle = new Circle(5);
@@ -47,4 +46,3 @@ public class bt4 {
             System.out.println("S hình chữ nhật (Overloading): " + shape.area(4, 6));
         }
     }
-}
