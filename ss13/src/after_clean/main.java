@@ -1,4 +1,6 @@
-package bt;
+package after_clean;
+
+import bt.Categories;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,12 +12,14 @@ public class main {
         int choice;
         boolean flag = true;
         List<Categories> categories = new ArrayList<>();
+
         do {
             System.out.println("********************* MAIN MENU *********************");
             System.out.println("1. Chọn SHOP MENU");
             System.out.println("2. chọn PRODUCT MANAGEMENT");
             System.out.print("Nhập lựa chọn của bạn: ");
             choice = scanner.nextInt();
+
             switch (choice) {
                 case 1:
                     boolean shopFlag = true;
@@ -78,6 +82,7 @@ public class main {
                                                     String description = scanner.nextLine();
                                                     System.out.print("Nhập trạng thái (true/false): ");
                                                     boolean status = scanner.nextBoolean();
+
                                                     category.setCategory_name(name);
                                                     category.setDescribe(description);
                                                     category.setStatus(status);
@@ -91,6 +96,7 @@ public class main {
                                                 System.out.println("Không tìm thấy danh mục có ID: " + idUpdate);
                                             }
                                             break;
+
                                         case 4:
                                             System.out.println("Xóa danh mục");
                                             System.out.print("Nhập ID danh mục cần xóa: ");
@@ -162,24 +168,31 @@ public class main {
                                 Product newProduct = new Product();
                                 newProduct.inputData(scanner);
                                 break;
+
                             case 3:
                                 Product.updateProduct(scanner);
                                 break;
+
                             case 4:
                                 Product.deleteProduct(scanner);
                                 break;
+
                             case 5:
                                 Product.searchByNameOrTitle(scanner);
                                 break;
+
                             case 6:
                                 Product.searchByPriceRange(scanner);
                                 break;
+
                             case 7:
                                 Product.sortByPrice();
                                 break;
+
                             case 8:
                                 Product.sellProduct(scanner);
                                 break;
+
                             case 9:
                                 System.out.println("Chức năng thống kê sản phẩm theo danh mục đang phát triển...");
                                 break;
