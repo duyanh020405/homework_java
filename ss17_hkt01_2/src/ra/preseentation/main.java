@@ -1,17 +1,20 @@
-package ss17_htk01_1.src.ra.entity;
+package ra.preseentation;
 
-import ss17_htk01_1.src.ra.bussiness.Change_Infor;
 
+import ra.business.Change_Infor;
+import ra.entity.Student;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
-import static ss17_htk01_1.src.ra.bussiness.StudentManager.sortStudents;
-import static ss17_htk01_1.src.ra.bussiness.deleteStudent.deleteStudent;
+import static ra.business.sortStudents.sortStudentss;
+
 
 public class main {
     public static void main(String[] args) {
         boolean menu2 = false;
         Scanner sc = new Scanner(System.in);
-        Student[] students = new Student[100];
+        ArrayList<Student> students = new ArrayList<Student>();
         int size = 0;
         System.out.println("Enter Your First Name: ");
         do {
@@ -32,30 +35,36 @@ public class main {
                     } else {
                         System.out.println("-------------- Student Menu --------------- ");
                         for (int i = 0; i < size; i++) {
-                            students[i].display();
+                            students.get(i).display();
                             System.out.println("------------------------------");
                         }
                         break;
                     }
-                case 2:
-                    System.out.println("Nhap so sinhh vien muon them");
-                    int n = sc.nextInt();
-                    sc.nextLine();
-                    for (int i = size; i < size + n; i++) {
-                        students[i] = Student.InputData(sc);
-                    }
-                    size += n;
-                    System.out.println("Them moi thanh cong !!");
-                    break;
-                case 3:
-                    System.out.println("Nhap ma sinh vien muon sua");
-                    sc.nextLine();
-                    String s = sc.nextLine();
-                    new Change_Infor(students, s, size, sc);
-                    break;
-                case 4:
-                    deleteStudent(students, size, sc);
-                    break;
+                    case 2:
+                        System.out.println("Nhap so luong sinh vien muon them ");
+                        int n = sc.nextInt();
+                        for (int i = size; i < size + n; i++) {
+                            students.add(new Student());
+                        }
+                        size += n;
+                        System.out.println("Them moi thanh cong !!");
+                        break;
+                    case 3:
+                        System.out.println("Nhap ma sinh vien muon sua");
+                        sc.nextLine();
+                        String s = sc.nextLine();
+                        new Change_Infor(students, s, size, sc);
+                        break;
+                    case 4:
+                        System.out.println("Nhap ma sinh vien muon xoa");
+                        sc.nextLine();
+                        String x = sc.nextLine();
+                        for (int i = 0; i < students.size(); i++) {
+                            if (students.get(i).getStudent_id().equals(x)) {
+                                students.remove(i);
+                            }
+                        }
+                        break;
                 case 5:
                     do {
                         System.out.println("Tìm kiếm theo :");
@@ -69,8 +78,8 @@ public class main {
                                     System.out.println("Nhập tên :");
                                     String name = sc.nextLine();
                                     for (int i = 0; i < size; i++) {
-                                        if (name.equals(students[i].getStudentName())) {
-                                            System.out.println(students[i].display());
+                                        if (name.equals(students.get(i).getStudentName())) {
+                                            System.out.println(students.get(i).display());
                                         } else {
                                             System.out.println("Khng tìm kiếm thấy sinh viên");
                                         }
@@ -80,8 +89,8 @@ public class main {
                                     System.out.println("Nhập lớp học muốn tìm ");
                                     String className = sc.nextLine();
                                     for (int i = 0; i < size; i++) {
-                                        if (className.equals(students[i].getClassName())) {
-                                            System.out.println(students[i].display());
+                                        if (className.equals(students.get(i).getClassName())) {
+                                            System.out.println(students.get(i).display());
                                         } else {
                                             System.out.println("Khong tìm kiếm thấy sinh viên");
                                         }
@@ -93,8 +102,8 @@ public class main {
                                     System.out.println("Nhập điểm kết thúc :");
                                     int score_to = sc.nextInt();
                                     for (int i = 0; i < size; i++) {
-                                        if (students[i].getGpa() >= score_from && students[i].getGpa() <= score_to) {
-                                            System.out.println(students[i].display());
+                                        if (students.get(i).getGpa() >= score_from && students.get(i).getGpa() <= score_to) {
+                                            System.out.println(students.get(i).display());
                                         } else {
                                             System.out.println("Khong tìm kiếm thấy sinh viên");
                                         }
@@ -105,7 +114,7 @@ public class main {
                     }
                     while (menu2);
                 case 6:
-                    sortStudents(students, size, sc);
+                    sortStudentss(students, size, sc);
                     break;
                 case 7:
                     System.out.println("Chương trình kết thúc. Hẹn gặp lại!");
@@ -113,8 +122,7 @@ public class main {
                     break;
 
             }
-        }
-        while (true);
+        }while (true);
     }
 
 }

@@ -1,4 +1,5 @@
-package ss17_htk01_1.src;
+package ra.entity;
+
 
 import java.util.Scanner;
 
