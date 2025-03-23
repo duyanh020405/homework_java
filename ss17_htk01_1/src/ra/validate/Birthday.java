@@ -1,4 +1,4 @@
-package ss17_htk01_1.src.ra.presentation.validate;
+package ss17_htk01_1.src.ra.validate;
 
 import java.util.Scanner;
 
