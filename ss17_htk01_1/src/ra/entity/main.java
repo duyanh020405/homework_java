@@ -1,11 +1,11 @@
-package ss17_htk01_1.src.hkt_01.entity;
+package ss17_htk01_1.src.ra.entity;
 
-import ss17_htk01_1.src.hkt_01.bussiness.Change_Infor;
+import ss17_htk01_1.src.ra.bussiness.Change_Infor;
 
 import java.util.Scanner;
 
-import static ss17_htk01_1.src.hkt_01.bussiness.StudentManager.sortStudents;
-import static ss17_htk01_1.src.hkt_01.bussiness.deleteStudent.deleteStudent;
+import static ss17_htk01_1.src.ra.bussiness.StudentManager.sortStudents;
+import static ss17_htk01_1.src.ra.bussiness.deleteStudent.deleteStudent;
 
 public class main {
     public static void main(String[] args) {

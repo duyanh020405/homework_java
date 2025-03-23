@@ -1,12 +1,12 @@
-package hkt1_2.entity;
+package ra.entity;
 
 
-import hkt1_2.business.Change_Infor;
+import ra.business.Change_Infor;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import static hkt1_2.business.sortStudents.sortStudentss;
+import static ra.business.sortStudents.sortStudentss;
 
 
 public class main {

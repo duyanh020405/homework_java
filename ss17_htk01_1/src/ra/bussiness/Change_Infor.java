@@ -1,6 +1,6 @@
-package ss17_htk01_1.src.hkt_01.bussiness;
+package ss17_htk01_1.src.ra.bussiness;
 
-import ss17_htk01_1.src.hkt_01.entity.Student;
+import ss17_htk01_1.src.ra.entity.Student;
 
 import java.util.Scanner;
 
