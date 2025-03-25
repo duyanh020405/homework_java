@@ -15,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/ss17/ss17.iml" filepath="$PROJECT_DIR$/ss17/ss17.iml" />
       <module fileurl="file://$PROJECT_DIR$/ss17_hkt01_2/ss17_hkt01_2.iml" filepath="$PROJECT_DIR$/ss17_hkt01_2/ss17_hkt01_2.iml" />
       <module fileurl="file://$PROJECT_DIR$/ss18/ss18.iml" filepath="$PROJECT_DIR$/ss18/ss18.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ss19/ss19.iml" filepath="$PROJECT_DIR$/ss19/ss19.iml" />
       <module fileurl="file://$PROJECT_DIR$/ss3/ss3.iml" filepath="$PROJECT_DIR$/ss3/ss3.iml" />
       <module fileurl="file://$PROJECT_DIR$/ss4/ss4.iml" filepath="$PROJECT_DIR$/ss4/ss4.iml" />
       <module fileurl="file://$PROJECT_DIR$/ss5/ss5.iml" filepath="$PROJECT_DIR$/ss5/ss5.iml" />
@@ -23,6 +24,7 @@
       <module fileurl="file://$PROJECT_DIR$/ss8/ss8.iml" filepath="$PROJECT_DIR$/ss8/ss8.iml" />
       <module fileurl="file://$PROJECT_DIR$/ss9/ss9.iml" filepath="$PROJECT_DIR$/ss9/ss9.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test_2503/test_2503.iml" filepath="$PROJECT_DIR$/test_2503/test_2503.iml" />
     </modules>
   </component>
 </project>
