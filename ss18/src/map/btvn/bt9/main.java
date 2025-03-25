@@ -45,7 +45,9 @@ public class main {
             case 5:
                 System.out.println("Chuong trinh ket thuc");
                 on = false;
-
+            case 6 :
+                System.exit(0);
+                on = false;
             default:
                 System.out.println("Lua chon khong hop le.");
         }

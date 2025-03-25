@@ -48,14 +48,23 @@ public class main {
                     System.out.println("Avg Total salary: " + total_all);
                     break;
                 case 5:
-                    List<Employee> all_employees_min = new ArrayList<>(employees.values());
-                    all_employees_min.sort(Comparator.comparingDouble(Employee::getSalary));
-                    System.out.println("Nhan vien luong thap nhat: " + all_employees_min.get(0).getName());
+                    int max_salary = (int) employees.get(0).getSalary();
+                    for (Map.Entry<Integer, Employee> entry : employees.entrySet()) {
+                        if(entry.getValue().getSalary() > max_salary){
+                            max_salary = (int) entry.getValue().getSalary();
+                        }
+                    }
+                    System.out.println("Max salary: " + max_salary);
                     break;
+
                 case 6:
-                    List<Employee> all_employees_max = new ArrayList<>(employees.values());
-                    all_employees_max.sort(Comparator.comparingDouble(Employee::getSalary));
-                    System.out.println("Nhan vien luong thap nhat: " + all_employees_max.get(all_employees_max.size() - 1).getName());
+                    int min_salary = (int) employees.get(0).getSalary();
+                    for (Map.Entry<Integer, Employee> entry : employees.entrySet()) {
+                        if(entry.getValue().getSalary() < min_salary){
+                            max_salary = (int) entry.getValue().getSalary();
+                        }
+                    }
+                    System.out.println("Max salary: " + min_salary);
                     break;
                 default:
                     System.out.println("Lua chon khong hop le.");
