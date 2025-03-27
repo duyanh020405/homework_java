@@ -30,13 +30,11 @@ public class main {
         } else {
             System.out.println("Không có sản phẩm đắt tiền");
         }
-
-        /
         double totalValue = processor.calculateTotalValue(products);
         System.out.println("Tổng giá trị sản phẩm: " + totalValue);
 
 
-        System.out.println("\nDanh sách sản phẩm:");
+        System.out.println("Danh sách sản phẩm:");
         ProductProcessor.printProductList(products);
     }
 }
