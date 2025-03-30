@@ -31,10 +31,9 @@ public class ShoppingCart {
     }
     static void displayCart(){
         for (CartItem cart : cartItems) {
-            System.out.println(cart.product);
+            System.out.println(cart.product.getName() + cart.product.getPrice()+ cart.quantity);
             System.out.println("So luong : "+cart.quantity);
         }
-
     }
     static void checkout(){
         int sum = 0;

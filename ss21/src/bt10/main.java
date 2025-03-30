@@ -76,14 +76,6 @@ public class main {
                     System.out.println("Xin hay chon dung so !!");
                     break;
 
-
-
-
-
-
-
-
-
             }
 
 
