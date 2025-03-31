@@ -21,6 +21,9 @@ class BookManager {
         try (var oos = new ObjectOutputStream(new FileOutputStream(file))) {
             oos.writeObject(books);
         } catch (Exception ignored) {}
+        finally {
+
+        }
     }
 
     public void addBook(Book book) {
