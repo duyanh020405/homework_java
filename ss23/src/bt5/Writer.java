@@ -5,7 +5,7 @@ public class Writer extends Thread {
     public Writer(SharedData data) { this.data = data; }
 
     public void run() {
-        String[] messages = {"Xin chao"};
+        String[] messages = {"Xin chao","Tam biet"};
         for (String msg : messages) {
             data.write(msg);
             System.out.println("Writer: " + msg);

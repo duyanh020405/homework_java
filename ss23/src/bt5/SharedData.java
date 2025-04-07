@@ -19,6 +19,6 @@ class SharedData {
         }
         available = false;
         notify();
-        return message;
+        return "";
     }
 }
