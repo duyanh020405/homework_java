@@ -26,7 +26,8 @@ public class bt3 {
             int rowsAffected = ps.executeUpdate();
             if (rowsAffected > 0) {
                 System.out.println(" Cập nhật lương thành công!");
-            } else {
+            }
+            else {
                 System.out.println(" Không tìm thấy nhân viên với ID: " + id);
             }
         } catch (SQLException e) {
